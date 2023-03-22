@@ -27,10 +27,5 @@ return {
 				{ name = "path" }, -- file system paths
 			}),
 		})
-
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		require("lspconfig").tsserver.setup({
-			capabilities = capabilities,
-		})
 	end,
 }

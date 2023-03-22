@@ -9,6 +9,7 @@ return {
 		-- to setup format on save
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
+--[[
 		-- configure null_ls
 		null_ls.setup({
 			-- setup formatters & linters
@@ -44,5 +45,6 @@ return {
 				end
 			end,
 		})
+--]]
 	end,
 }
