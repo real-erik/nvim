@@ -21,3 +21,7 @@ keymap.set("n", "<leader>dr", ":DiffviewRefresh<CR>")
 
 -- window control
 keymap.set("n", "<leader>w", "<C-w>")
+
+-- tabs
+keymap.set("n", "<leader>to", ":tabnew<CR>")
+keymap.set("n", "<leader>tc", ":tabclose<CR>")
