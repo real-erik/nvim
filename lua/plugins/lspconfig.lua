@@ -35,6 +35,7 @@ return {
 			nmap("gr", telescope.lsp_references, "[G]oto [R]eferences")
 			nmap("gI", vim.lsp.buf.implementation, "[G]oto [I]mplementation")
 			nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition")
+			nmap("<leader>f", vim.lsp.buf.format, "[F]ormat")
 
 			-- See `:help K` for why this keymap
 			nmap("K", vim.lsp.buf.hover, "Hover Documentation")
