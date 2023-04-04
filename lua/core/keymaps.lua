@@ -12,6 +12,7 @@ keymap.set("n", "<leader><space>", telescope.buffers, { desc = "[ ] Find existin
 keymap.set("n", "<leader>?", telescope.oldfiles, { desc = "[?] Find recently opened files" })
 keymap.set("n", "<leader>sf", telescope.find_files, { desc = "[F]iles" })
 keymap.set("n", "<leader>sg", telescope.live_grep, { desc = "[G]rep" })
+keymap.set("n", "<space>sb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
 
 -- diffview keymaps
 keymap.set("n", "<leader>do", ":DiffviewOpen<CR>")
