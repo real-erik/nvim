@@ -19,6 +19,7 @@ keymap.set("n", "<leader>do", ":DiffviewOpen<CR>")
 keymap.set("n", "<leader>dc", ":DiffviewClose<CR>")
 keymap.set("n", "<leader>dh", ":DiffviewFileHistory<CR>")
 keymap.set("n", "<leader>dr", ":DiffviewRefresh<CR>")
+keymap.set("n", "<leader>df", ":DiffviewFileHistory %<CR>")
 
 -- fugitive keymaps
 keymap.set("n", "<leader>gs", ":Git status<CR>")
