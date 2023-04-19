@@ -36,7 +36,6 @@ return {
       nmap("gI", vim.lsp.buf.implementation, "[G]oto [I]mplementation")
       nmap("fd", vim.diagnostic.open_float, "[F]loat [D]escription")
       nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition")
-      nmap("<leader>f", vim.lsp.buf.format, "[F]ormat")
 
       -- See `:help K` for why this keymap
       nmap("K", vim.lsp.buf.hover, "Hover Documentation")
