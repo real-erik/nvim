@@ -5,6 +5,9 @@ keymap.set("n", "U", ":redo<CR>")
 keymap.set("n", "<leader>e", vim.cmd.Ex)
 keymap.set("n", "<leader>s", vim.cmd.w)
 
+-- clear search highlights
+keymap.set("n", "<ESC>", ":nohl<CR>")
+
 local telescope = require("telescope.builtin")
 
 -- telescope keymaps
@@ -13,6 +16,8 @@ keymap.set("n", "<leader>?", telescope.oldfiles, { desc = "[?] Find recently ope
 keymap.set("n", "<leader>sf", telescope.find_files, { desc = "[F]iles" })
 keymap.set("n", "<leader>sg", telescope.live_grep, { desc = "[G]rep" })
 keymap.set("n", "<space>sb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
+keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
+keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
 -- diffview keymaps
 keymap.set("n", "<leader>do", ":DiffviewOpen<CR>")
@@ -22,8 +27,6 @@ keymap.set("n", "<leader>dr", ":DiffviewRefresh<CR>")
 keymap.set("n", "<leader>df", ":DiffviewFileHistory %<CR>")
 
 -- fugitive keymaps
-keymap.set("n", "<leader>gs", ":Git status<CR>")
-keymap.set("n", "<leader>gb", ":Git branch<CR>")
 keymap.set("n", "<leader>gc", ":Git commit<CR>")
 
 -- window control

@@ -20,6 +20,5 @@ opt.autoindent = true -- copy indent from current line when starting new one
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 opt.incsearch = true -- move to your search as you write it
-opt.hlsearch = false -- highlight my search
 
 opt.splitright = true
