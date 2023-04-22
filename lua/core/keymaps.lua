@@ -8,6 +8,8 @@ keymap.set("n", "<leader>s", vim.cmd.w)
 -- clear search highlights
 keymap.set("n", "<ESC>", ":nohl<CR>")
 
+keymap.set("n", "<leader>y", ":lua Yank_and_modify()<CR>")
+
 local telescope = require("telescope.builtin")
 
 -- telescope keymaps
