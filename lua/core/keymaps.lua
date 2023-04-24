@@ -8,10 +8,9 @@ keymap.set("n", "<leader>s", vim.cmd.w)
 -- clear search highlights
 keymap.set("n", "<ESC>", ":nohl<CR>")
 
-keymap.set("n", "<leader>y", ":lua Log_variable()<CR>")
+keymap.set("n", "<leader>y", require('variable-logger'))
 
 local telescope = require("telescope.builtin")
-
 -- telescope keymaps
 keymap.set("n", "<leader><space>", telescope.buffers, { desc = "[ ] Find existing buffers" })
 keymap.set("n", "<leader>?", telescope.oldfiles, { desc = "[?] Find recently opened files" })
