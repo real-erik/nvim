@@ -4,6 +4,8 @@ local keymap = vim.keymap
 keymap.set("n", "U", ":redo<CR>")
 keymap.set("n", "<leader>e", vim.cmd.Ex)
 keymap.set("n", "<leader>s", vim.cmd.w)
+keymap.set("n", "<c-u>", "<c-u>zz")
+keymap.set("n", "<c-d>", "<c-d>zz")
 
 -- clear search highlights
 keymap.set("n", "<ESC>", ":nohl<CR>")
