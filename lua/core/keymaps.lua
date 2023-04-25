@@ -10,7 +10,13 @@ keymap.set("n", "<c-d>", "<c-d>zz")
 -- clear search highlights
 keymap.set("n", "<ESC>", ":nohl<CR>")
 
-keymap.set("n", "<leader>y", require("variable-logger"))
+local logger = require('variable-logger')
+local function logWithAsterisk()
+  logger.log_variable(' ******** ')
+end
+
+keymap.set("n", "<leader>ya", logWithAsterisk )
+keymap.set("n", "<leader>y", logger.log_variable )
 
 local telescope = require("telescope.builtin")
 -- telescope keymaps
