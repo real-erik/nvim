@@ -19,6 +19,8 @@ local function logWithAsterisk()
 	logger.log_variable(" ******** ")
 end
 
+keymap.set("n", "<leader>tf", require("rekt").open_test_file)
+
 keymap.set("n", "<leader>ya", logWithAsterisk)
 keymap.set("n", "<leader>y", logger.log_variable)
 
