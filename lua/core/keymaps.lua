@@ -3,7 +3,7 @@ local keymap = vim.keymap
 -- default vim keymap overrides
 keymap.set("n", "U", ":redo<CR>")
 keymap.set("n", "<leader>e", vim.cmd.Ex)
-keymap.set("n", "<leader>s", vim.cmd.w)
+keymap.set("n", "<leader>w", vim.cmd.w)
 keymap.set("n", "<c-u>", "<c-u>zz")
 keymap.set("n", "<c-d>", "<c-d>zz")
 keymap.set("n", "<c-i>", "<c-i>zz")
@@ -14,15 +14,20 @@ keymap.set("n", "{", "{zz")
 -- clear search highlights
 keymap.set("n", "<ESC>", ":nohl<CR>")
 
+-- logger keymaps
 local logger = require("variable-logger")
 local function logWithAsterisk()
 	logger.log_variable(" ******** ")
 end
-
-keymap.set("n", "<leader>tf", require("rekt").open_test_file)
-
 keymap.set("n", "<leader>ya", logWithAsterisk)
 keymap.set("n", "<leader>y", logger.log_variable)
+
+-- rekt keymaps
+keymap.set("n", "<leader>tf", require("rekt").open_test_file)
+
+-- gitsigns keymaps
+keymap.set("n", "<leader>gh", require("gitsigns").next_hunk)
+keymap.set("n", "<leader>gp", require("gitsigns").preview_hunk)
 
 local telescope = require("telescope.builtin")
 -- telescope keymaps
@@ -45,7 +50,7 @@ keymap.set("n", "<leader>df", ":DiffviewFileHistory %<CR>")
 keymap.set("n", "<leader>gc", ":Git commit<CR>")
 
 -- window control
-keymap.set("n", "<leader>w", "<C-w>")
+keymap.set("n", "<leader>a", "<C-w>")
 
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>")
