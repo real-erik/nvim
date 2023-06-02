@@ -12,12 +12,12 @@ keymap.set("n", "}", "}zz")
 keymap.set("n", "{", "{zz")
 
 -- clear search highlights
-keymap.set("n", "<ESC>", ":nohl<CR>")
+keymap.set("n", "<ESC>", ":nohl<CR>", { silent = true })
 
 -- logger keymaps
 local logger = require("variable-logger")
 local function logWithAsterisk()
-	logger.log_variable(" ******** ")
+  logger.log_variable(" ******** ")
 end
 keymap.set("n", "<leader>ya", logWithAsterisk)
 keymap.set("n", "<leader>y", logger.log_variable)
@@ -33,11 +33,12 @@ local telescope = require("telescope.builtin")
 -- telescope keymaps
 keymap.set("n", "<leader><space>", telescope.buffers, { desc = "[ ] Find existing buffers" })
 keymap.set("n", "<leader>?", telescope.oldfiles, { desc = "[?] Find recently opened files" })
-keymap.set("n", "<leader>sf", telescope.find_files, { desc = "[F]iles" })
-keymap.set("n", "<leader>sg", telescope.live_grep, { desc = "[G]rep" })
+keymap.set("n", "<leader>sf", telescope.find_files, { desc = "[S]earch [F]iles" })
+keymap.set("n", "<leader>sg", telescope.live_grep, { desc = "[S]earch [G]rep" })
+keymap.set("n", "<leader>sr", telescope.resume, { desc = "[S]earch [R]esume" })
 keymap.set("n", "<space>sb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
-keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
+keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>")   -- list current changes per file with diff preview ["gs" for git status]
 
 -- diffview keymaps
 keymap.set("n", "<leader>do", ":DiffviewOpen<CR>")
