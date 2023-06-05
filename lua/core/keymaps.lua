@@ -26,8 +26,14 @@ keymap.set("n", "<leader>y", logger.log_variable)
 keymap.set("n", "<leader>tf", require("rekt").open_test_file)
 
 -- gitsigns keymaps
-keymap.set("n", "<leader>gh", require("gitsigns").next_hunk)
+keymap.set("n", "<leader>gh", function()
+  require("gitsigns").next_hunk()
+  vim.defer_fn(function()
+    vim.cmd("normal! zz")
+  end, 1)
+end)
 keymap.set("n", "<leader>gp", require("gitsigns").preview_hunk)
+keymap.set("n", "<leader>gr", require("gitsigns").reset_hunk)
 
 local telescope = require("telescope.builtin")
 -- telescope keymaps
