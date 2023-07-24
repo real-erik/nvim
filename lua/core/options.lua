@@ -22,3 +22,5 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.incsearch = true -- move to your search as you write it
 
 opt.splitright = true
+
+vim.api.nvim_command('set cursorline')

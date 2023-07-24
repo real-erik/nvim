@@ -10,6 +10,8 @@ keymap.set("n", "<c-i>", "<c-i>zz")
 keymap.set("n", "<c-o>", "<c-o>zz")
 keymap.set("n", "}", "}zz")
 keymap.set("n", "{", "{zz")
+keymap.set("n", "n", "nzz")
+keymap.set("n", "N", "Nzz")
 
 -- clear search highlights
 keymap.set("n", "<ESC>", ":nohl<CR>", { silent = true })
@@ -62,3 +64,7 @@ keymap.set("n", "<leader>a", "<C-w>")
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tc", ":tabclose<CR>")
+
+-- github thing
+keymap.set("n", "<leader>git", require("utils.git").open_web_client)
+

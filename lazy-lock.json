@@ -22,5 +22,6 @@
   "rekt": { "branch": "master", "commit": "38d7a438c36bb7d3338e7bf087b64fca54c72d24" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "e0fcb12702ad0d2873544a31730f9aaef04fd032" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
+  "variable-logger.nvim": { "branch": "main", "commit": "d3ddd239dc9d38312db45cb08143355dd729d183" },
   "vim-fugitive": { "branch": "master", "commit": "5f0d280b517cacb16f59316659966c7ca5e2bea2" }
 }
