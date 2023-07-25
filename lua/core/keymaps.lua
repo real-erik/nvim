@@ -69,6 +69,6 @@ keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tc", ":tabclose<CR>")
 
 -- github thing
-keymap.set("n", "<leader>git", require("utils.git").open_web_client)
-keymap.set("n", "<leader>file", require("utils.git").open_web_client_file)
+keymap.set("n", "<leader>git", require("github-util").open_web_client)
+keymap.set("n", "<leader>file", require("github-util").open_web_client_file)
 
