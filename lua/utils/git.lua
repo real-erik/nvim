@@ -74,6 +74,8 @@ function M.open_web_client_file(remote_name)
   local cmd = string.format("open %s/blob/%s%s", url, gitBranch, relative_file_path)
 
   os.execute(cmd)
+
+  return url
 end
 
 return M
