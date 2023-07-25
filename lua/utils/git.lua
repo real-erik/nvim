@@ -45,7 +45,6 @@ function M.open_web_client(remote_name)
   os.execute(cmd)
 end
 
--- wip: go to file on github
 function M.open_web_client_file(remote_name)
   local url = M.get_http_remote_url(remote_name)
 
@@ -53,6 +52,8 @@ function M.open_web_client_file(remote_name)
     print("Could not determine URL for remote")
     return
   end
+
+  url = string.gsub(url, "\n", "")
 
   local branch = io.popen(string.format("git branch"))
 
@@ -70,7 +71,7 @@ function M.open_web_client_file(remote_name)
   local current_working_dir = vim.loop.cwd()
   local relative_file_path = current_file_path:gsub(current_working_dir, "")
 
-  local cmd = string.format("open %s/tree/%s%s", url, gitBranch, relative_file_path)
+  local cmd = string.format("open %s/blob/%s%s", url, gitBranch, relative_file_path)
 
   os.execute(cmd)
 end
