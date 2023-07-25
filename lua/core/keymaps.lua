@@ -27,6 +27,9 @@ keymap.set("n", "<leader>y", logger.log_variable)
 -- rekt keymaps
 keymap.set("n", "<leader>tf", require("rekt").open_test_file)
 
+-- new formatting - wip
+-- keymap.set("n", "<leader>ff", ":Format<CR>")
+
 -- gitsigns keymaps
 keymap.set("n", "<leader>gh", function()
   require("gitsigns").next_hunk()
@@ -67,4 +70,5 @@ keymap.set("n", "<leader>tc", ":tabclose<CR>")
 
 -- github thing
 keymap.set("n", "<leader>git", require("utils.git").open_web_client)
+keymap.set("n", "<leader>file", require("utils.git").open_web_client_file)
 
