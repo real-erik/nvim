@@ -26,6 +26,7 @@ keymap.set("n", "<leader>y", logger.log_variable)
 
 -- rekt keymaps
 keymap.set("n", "<leader>tf", require("rekt").open_test_file)
+keymap.set("n", "<leader>ts", require("rekt").open_source_file)
 
 -- new formatting - wip
 -- keymap.set("n", "<leader>ff", ":Format<CR>")
@@ -69,6 +70,7 @@ keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tc", ":tabclose<CR>")
 
 -- github thing
-keymap.set("n", "<leader>git", require("github-util").open_web_client)
-keymap.set("n", "<leader>file", require("github-util").open_web_client_file)
+vim.keymap.set("n", "<leader>git", require("github-utils").open_web_client)
+vim.keymap.set("n", "<leader>file", require("github-utils").open_web_client_file)
+vim.keymap.set("n", "<leader>perm", require("github-utils").create_permalink)
 
