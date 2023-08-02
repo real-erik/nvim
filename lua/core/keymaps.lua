@@ -41,16 +41,18 @@ end)
 keymap.set("n", "<leader>gp", require("gitsigns").preview_hunk)
 keymap.set("n", "<leader>gr", require("gitsigns").reset_hunk)
 
-local telescope = require("telescope.builtin")
+-- fzf-lua keymaps
+local fzf = require("fzf-lua")
+keymap.set("n", "<leader><space>", fzf.buffers)
+keymap.set("n", "<leader>sf", fzf.files)
+keymap.set("n", "<leader>sg", function()
+  fzf.grep({ search = "" })
+end)
+keymap.set("n", "<leader>sr", fzf.resume)
+
 -- telescope keymaps
-keymap.set("n", "<leader><space>", telescope.buffers, { desc = "[ ] Find existing buffers" })
-keymap.set("n", "<leader>?", telescope.oldfiles, { desc = "[?] Find recently opened files" })
-keymap.set("n", "<leader>sf", telescope.find_files, { desc = "[S]earch [F]iles" })
-keymap.set("n", "<leader>sg", telescope.live_grep, { desc = "[S]earch [G]rep" })
-keymap.set("n", "<leader>sr", telescope.resume, { desc = "[S]earch [R]esume" })
 keymap.set("n", "<space>sb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
-keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>")   -- list current changes per file with diff preview ["gs" for git status]
 
 -- diffview keymaps
 keymap.set("n", "<leader>do", ":DiffviewOpen<CR>")
@@ -62,7 +64,7 @@ keymap.set("n", "<leader>df", ":DiffviewFileHistory %<CR>")
 -- fugitive keymaps
 keymap.set("n", "<leader>gc", ":Git commit<CR>")
 
--- window control
+-- window control - write current buffer before switching
 keymap.set("n", "<leader>a", "<C-w>")
 
 -- tabs
@@ -70,7 +72,7 @@ keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tc", ":tabclose<CR>")
 
 -- github thing
-vim.keymap.set("n", "<leader>git", require("github-utils").open_web_client)
-vim.keymap.set("n", "<leader>file", require("github-utils").open_web_client_file)
-vim.keymap.set("n", "<leader>perm", require("github-utils").create_permalink)
-
+vim.keymap.set("n", "<leader>gitw", require("github-utils").open_web_client)
+vim.keymap.set("n", "<leader>gitf", require("github-utils").open_web_client_file)
+vim.keymap.set("n", "<leader>gitp", require("github-utils").create_permalink)
+vim.keymap.set("v", "<leader>gitm", require("github-utils").create_permalink_multiline)
