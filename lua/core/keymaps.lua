@@ -77,3 +77,6 @@ vim.keymap.set("n", "<leader>gitw", require("github-utils").open_web_client)
 vim.keymap.set("n", "<leader>gitf", require("github-utils").open_web_client_file)
 vim.keymap.set("n", "<leader>gitp", require("github-utils").create_permalink)
 vim.keymap.set("v", "<leader>gitm", require("github-utils").create_permalink_multiline)
+
+-- override <c-l> in file browser
+keymap.set("n", "<leader><leader>l", "<Plug>NetrwRefresh" )
