@@ -27,12 +27,12 @@ return {
         vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
       end
 
-      local telescope = require("telescope.builtin")
+      local fzf = require("fzf-lua")
 
       nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
       nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
-      nmap("gd", telescope.lsp_definitions, "[G]oto [D]efinition")
-      nmap("gr", telescope.lsp_references, "[G]oto [R]eferences")
+      nmap("gd", fzf.lsp_definitions, "[G]oto [D]efinition")
+      nmap("gr", fzf.lsp_references, "[G]oto [R]eferences")
       nmap("gI", vim.lsp.buf.implementation, "[G]oto [I]mplementation")
       nmap("fd", vim.diagnostic.open_float, "[F]loat [D]escription")
       nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition")
