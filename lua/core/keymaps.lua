@@ -12,6 +12,10 @@ keymap.set("n", "}", "}zz")
 keymap.set("n", "{", "{zz")
 keymap.set("n", "n", "nzz")
 keymap.set("n", "N", "Nzz")
+keymap.set("n", "<c-k>", ":wincmd k<CR>")
+keymap.set("n", "<c-j>", ":wincmd j<CR>")
+keymap.set("n", "<c-h>", ":wincmd h<CR>")
+keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
 -- clear search highlights
 keymap.set("n", "<ESC>", ":nohl<CR>", { silent = true })
@@ -63,9 +67,6 @@ keymap.set("n", "<leader>df", ":DiffviewFileHistory %<CR>")
 
 -- fugitive keymaps
 keymap.set("n", "<leader>gc", ":Git commit<CR>")
-
--- window control - write current buffer before switching
-keymap.set("n", "<leader>a", "<C-w>")
 
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>")
