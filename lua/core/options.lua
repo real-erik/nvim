@@ -23,6 +23,8 @@ opt.incsearch = true -- move to your search as you write it
 
 opt.splitright = true
 
+opt.swapfile = false
+
 -- opt.clipboard = "unnamedplus"
 
 vim.api.nvim_command('set cursorline')
