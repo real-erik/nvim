@@ -67,6 +67,8 @@ keymap.set("n", "<leader>gc", ":Git commit<CR>")
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tc", ":tabclose<CR>")
+keymap.set("n", "<tab>", ":tabnext<CR>")
+keymap.set("n", "<s-tab>", ":tabprev<CR>")
 
 -- github thing
 local github_utils = require("github-utils")
