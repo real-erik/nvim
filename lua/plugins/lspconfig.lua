@@ -6,6 +6,9 @@ return {
     "williamboman/mason-lspconfig.nvim",
   },
   config = function()
+    -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+    require("neodev").setup({})
+
     -- import lspconfig plugin safely
     local lspconfig_status, lspconfig = pcall(require, "lspconfig")
     if not lspconfig_status then
