@@ -33,6 +33,12 @@ keymap.set("n", "<leader>ts", rekt.open_source_file)
 -- new formatting - wip
 -- keymap.set("n", "<leader>ff", ":Format<CR>")
 
+-- leap
+keymap.set("n", "s", function()
+  local current_window = vim.fn.win_getid()
+  require("leap").leap({ target_windows = { current_window } })
+end)
+
 -- gitsigns keymaps
 local gitsigns = require("gitsigns")
 keymap.set("n", "<leader>gh", function()
@@ -78,4 +84,4 @@ vim.keymap.set("n", "<leader>gitp", github_utils.create_permalink)
 vim.keymap.set("v", "<leader>gitm", github_utils.create_permalink_multiline)
 
 -- override <c-l> in file browser
-keymap.set("n", "<leader>z", "<Plug>NetrwRefresh" )
+keymap.set("n", "<leader>z", "<Plug>NetrwRefresh")
