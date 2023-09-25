@@ -3,7 +3,7 @@ return {
 	-- "ErikAasen-RSS/variable-logger.nvim",
 	config = function()
 		require("variable-logger").setup({
-			prefix = "🪵🪵🪵🪵🪵🪵🪵 - ",
+			prefix = "🐢🐢🐢 - ",
 		})
 	end,
 }
