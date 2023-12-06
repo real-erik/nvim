@@ -6,8 +6,8 @@ keymap.set("n", "<leader>e", vim.cmd.Ex)
 keymap.set("n", "<leader>w", vim.cmd.w)
 keymap.set("n", "<c-u>", "<c-u>zz")
 keymap.set("n", "<c-d>", "<c-d>zz")
-keymap.set("n", "<c-i>", "<c-i>zz")
-keymap.set("n", "<c-o>", "<c-o>zz")
+-- keymap.set("n", "<c-i>", "<c-i>zz")
+-- keymap.set("n", "<c-o>", "<c-o>zz")
 keymap.set("n", "}", "}zz")
 keymap.set("n", "{", "{zz")
 keymap.set("n", "n", "nzz")
@@ -63,7 +63,7 @@ keymap.set("n", "<leader>gb", fzf.git_branches)
 -- diffview keymaps
 keymap.set("n", "<leader>do", ":DiffviewOpen<CR>")
 keymap.set("n", "<leader>dc", ":DiffviewClose<CR>")
-keymap.set("n", "<leader>dh", ":DiffviewFileHistory<CR>")
+keymap.set("n", "<leader>dh", ":DiffviewFileHistory --range=HEAD~30..HEAD<CR>")
 keymap.set("n", "<leader>dr", ":DiffviewRefresh<CR>")
 keymap.set("n", "<leader>df", ":DiffviewFileHistory %<CR>")
 
@@ -73,8 +73,6 @@ keymap.set("n", "<leader>gc", ":Git commit<CR>")
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tc", ":tabclose<CR>")
-keymap.set("n", "<tab>", ":tabnext<CR>")
-keymap.set("n", "<s-tab>", ":tabprev<CR>")
 
 -- github thing
 local github_utils = require("github-utils")
