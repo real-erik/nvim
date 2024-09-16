@@ -11,15 +11,15 @@ opt.number = true
 opt.wrap = false
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
+opt.tabstop = 2       -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 2    -- 2 spaces for indent width
+opt.expandtab = true  -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
-opt.incsearch = true -- move to your search as you write it
+opt.smartcase = true  -- if you include mixed case in your search, assumes you want case-sensitive
+opt.incsearch = true  -- move to your search as you write it
 
 opt.splitright = true
 
@@ -27,5 +27,9 @@ opt.swapfile = false
 
 -- opt.clipboard = "unnamedplus"
 
-vim.api.nvim_command('set cursorline')
-
+vim.api.nvim_command("set cursorline")
+-- vim.api.nvim_command("set number")
+-- vim.api.nvim_command("set textwidth=0")
+-- vim.api.nvim_command("set wrapmargin=0")
+-- vim.api.nvim_command("set wrap")
+-- vim.api.nvim_command("set linebreak")

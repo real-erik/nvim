@@ -20,7 +20,7 @@ return {
 
 				-- Linters
 				diagnostics.ansiblelint,
-				diagnostics.eslint,
+				-- diagnostics.eslint,
 			},
 		})
 	end,
